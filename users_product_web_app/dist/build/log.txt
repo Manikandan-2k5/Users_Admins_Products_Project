@@ -1,0 +1,41 @@
+Timing to complete init function0.001 s
+CliLocation :/usr/lib/node_modules/@zoho/lyte-cli
+ CliVersion 3.3.1
+addons building initated for/home/manikandans/users_product_web_app/node_modules/@zoho/lyte-ui-component/build/build.js
+build file exists on addons building
+Building time of addons : 16.292 s
+Building time of copyAppDir : 0.001 s
+[Copy] routes => dist/routes
+
+Building time of routes : 0.001 s
+Building components ....
+Searching for syntax errors.....
+Finding the unclosed tags compilation over
+[Time] => find unclosedTags => 0.003 s
+Running compilerule ...
+[Time] => Convert Lyte syntax => 0.003 s
+browser Endpoint ws://127.0.0.1:43895/devtools/browser/c49cd564-8b7a-4c6d-9597-28a6217cbab5
+Browser launched
+page opened
+Post method request get caught with url/post
+Time taken for end call back be 0.246 s
+Callback function called 0 shome-portal,admin-main-portal,admin-portal,user-login-portal,user-portal,user-signup-portal,admin-login-portal,welcome-comp,create-product,update-product,my-products,user-main-portal
+Time to end the dynamic nodes0.247 s
+Generating dist components...
+
+Time to end processing template0.002 s
+Building time of components : 0.258 s
+Building models ..............
+
+Building time of models : 0.011 s
+Building helpers .....
+[Copy] components/helpers => dist/components/helpers
+
+Building time of helpers : 0.001 s
+Building time of mixins : 0 s
+Building time of services : 0 s
+Building time of consolidate : 0.003 s
+LiveServer running in 45653
+Minified Count : 0
+Total Building Time : 16.586 s
+Building completed

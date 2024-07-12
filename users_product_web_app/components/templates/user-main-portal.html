@@ -1,0 +1,81 @@
+<template tag-name="user-main-portal">
+    <div class="header">
+        <lyte-dropdown lt-prop-selected="all_products">
+            <template is="registerYield" yield-name="yield">
+                <lyte-drop-box>
+                    <lyte-drop-body>
+                        <lyte-drop-item data-value="all_products" onclick="{{action('getAllProducts')}}">All Products</lyte-drop-item>
+                        <lyte-drop-item data-value="user_products" onclick="{{action('getUserProducts')}}">My Products</lyte-drop-item>
+                        <lyte-drop-item data-value="mrs_products" onclick="{{action('getMRSProducts')}}">Most Recently Searched</lyte-drop-item>
+                    </lyte-drop-body>
+                </lyte-drop-box>
+            </template>
+        </lyte-dropdown>
+        <section class="header-buttons">
+            <lyte-button lt-prop-appearance="primary" onclick="{{action('redirect')}}">
+                <template is="registerYield" yield-name="text">
+                   Your Products
+                </template>
+            </lyte-button>
+            <lyte-button lt-prop-appearance="primary" onclick="{{action('logout')}}">
+                <template is="registerYield" yield-name="text">
+                    Logout
+                </template>
+            </lyte-button>
+        </section>
+    </div>
+    <section class="main">
+        <div class="products">
+            <% if(products.length==0){ %>
+                <div>No Products</div>
+            <% } else{ %>  
+                <lyte-search lt-prop-placeholder="Search Product" class="search-bar" lt-prop-query-selector = '{"scope" : "tbody", "search" : "td:first-of-type", "target" : "tr"}' on-search = "{{method('error')}}"></lyte-search> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Brand</th>
+                            <th>Product Price</th>
+                            <th>Product Origin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% products.forEach(function(product){ %>
+                        <tr class="rows" onclick="{{action('viewProduct', product)}}">
+                            <td>{{product.product_name}}</td>
+                            <td>{{product.product_brand}}</td>
+                            <td>{{product.product_price}}</td>
+                            <td>{{product.product_origin}}</td>
+                        </tr>     
+                    <% }); %>
+                    </tbody>
+                </table>
+            <% } %>
+        </div>
+        <div class="view-product-section">
+            <div class="detail">
+                <label>Name:</label>
+                <p id="product_name"></p>
+            </div>
+            <div class="detail">
+                <label>Brand:</label>
+                <p id="product_brand"></p>
+            </div>
+            <div class="detail">
+                <label>Price:</label>
+                <p id="product_price"></p>
+            </div>
+            <div class="detail">
+                <label>Origin:</label>
+                <p id="product_origin"></p>
+            </div>
+            <lyte-button lt-prop-appearance="primary" onclick="{{action('closeProductView')}}">
+                <template is="registerYield" yield-name="text">
+                    Close
+                </template>
+            </lyte-button>
+        </div>
+    </section>
+   
+
+</template>

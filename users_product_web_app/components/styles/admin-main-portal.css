@@ -1,0 +1,13 @@
+.admin-header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin:1rem 0;
+}
+
+.requests{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}

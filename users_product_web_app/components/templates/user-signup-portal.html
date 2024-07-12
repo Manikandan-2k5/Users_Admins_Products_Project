@@ -1,0 +1,14 @@
+<template tag-name="user-signup-portal">
+    <section>
+        <lyte-input id="username" name="username" lt-prop-label="Name" lt-prop-placeholder = "Enter Name"></lyte-input>
+        <lyte-input id="phone" name="phone" lt-prop-label="Phone No" lt-prop-placeholder = "Enter Phone No"></lyte-input>
+        <lyte-input id="mail" name="mail" lt-prop-label="Mail" lt-prop-placeholder = "Enter Mail"></lyte-input>
+        <lyte-input id="password" name="password" lt-prop-label="Password" lt-prop-placeholder = "Enter Password"></lyte-input>
+        <lyte-button lt-prop-appearance="primary" onclick="{{action('addRequest')}}">
+            <template is="registerYield" yield-name="text">
+                Request Approval
+            </template>
+        </lyte-button>
+    </section>
+    <lyte-alert lt-prop-type="warning" id="signup_alert"></lyte-alert>
+</template>

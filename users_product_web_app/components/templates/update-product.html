@@ -1,0 +1,16 @@
+<template tag-name="update-product">
+    <lyte-input id="product_name" name="product_name" lt-prop-label="Product_Name" lt-prop-placeholder = "Enter Product Name"></lyte-input>
+    <lyte-input id="brand" name="brand" lt-prop-label="Brand" lt-prop-placeholder = "Enter Brand"></lyte-input>
+    <lyte-input id="price" name="price" lt-prop-label="Price" lt-prop-placeholder = "Enter Price"></lyte-input>
+    <lyte-input id="product_origin" name="origin" lt-prop-label="Origin" lt-prop-placeholder = "Enter Origin"></lyte-input>
+    <lyte-button lt-prop-appearance="primary" onclick="{{action('updateProduct')}}">
+        <template is="registerYield" yield-name="text">
+            Update Product
+        </template>
+    </lyte-button>
+    <lyte-button lt-prop-appearance="primary" onclick="{{action('cancelUpdate')}}">
+        <template is="registerYield" yield-name="text">
+            Cancel
+        </template>
+    </lyte-button>
+</template>

@@ -1,0 +1,67 @@
+<template tag-name="my-products">
+    <section class="products_header">
+        <lyte-button lt-prop-appearance="primary" onclick="{{action('create')}}">
+            <template is="registerYield" yield-name="text">
+                Create Product
+            </template>
+        </lyte-button>
+        <section class="header-buttons">
+            <lyte-button lt-prop-appearance="primary" onclick="{{action('redirect')}}">
+                <template is="registerYield" yield-name="text">
+                    Home
+                </template>
+            </lyte-button>
+            <lyte-button lt-prop-appearance="primary" onclick="{{action('logout')}}">
+                <template is="registerYield" yield-name="text">
+                    Logout
+                </template>
+            </lyte-button>
+        </section>
+    </section>
+    <section class="products_main">
+        <div class="products">
+            <% if(products.length==0){ %>
+                <div>No Products</div>
+            <% } else{ %>  
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Brand</th>
+                            <th>Product Price</th>
+                            <th>Product Origin</th>
+                            <th>Update Product</th>
+                            <th>Delete Product</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% products.forEach(function(product){ %>
+                        <tr class="rows">
+                            <td>{{product.product_name}}</td>
+                            <td>{{product.product_brand}}</td>
+                            <td>{{product.product_price}}</td>
+                            <td>{{product.product_origin}}</td>
+                            <td>
+                                <lyte-button lt-prop-appearance="primary" onclick="{{action('update', product)}}">
+                                    <template is="registerYield" yield-name="text">
+                                        Update
+                                    </template>
+                                </lyte-button>
+                            </td>
+                            <td>
+                                <lyte-button lt-prop-appearance="primary" onclick="{{action('delete', product.product_id)}}">
+                                    <template is="registerYield" yield-name="text">
+                                        Delete
+                                    </template>
+                                </lyte-button>
+                            </td>
+                        </tr>     
+                    <% }); %>
+                    </tbody>
+                </table>
+            <% } %>
+        </div>
+    </section>
+    <section id="product_fields_box"></section>
+    <lyte-alert lt-prop-heading = "" lt-prop-primary-message = "" lt-prop-type="warning" id="products_alert"></lyte-alert>
+</template>

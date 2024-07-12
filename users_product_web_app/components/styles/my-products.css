@@ -1,0 +1,20 @@
+.products_main{
+    display:flex;
+}
+
+.products_header{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    margin:1rem 0;
+}
+
+create-product{
+    width:90%;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    margin:1rem auto;
+    border:1px solid black;
+    padding:1.5rem;
+}

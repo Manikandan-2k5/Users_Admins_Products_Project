@@ -1,0 +1,12 @@
+<template tag-name="user-login-portal">
+    <section>
+        <lyte-input id="mail" name="mail" lt-prop-label="Mail" lt-prop-placeholder = "Enter Mail"></lyte-input>
+        <lyte-input id="password" name="password" lt-prop-label="Password" lt-prop-placeholder = "Enter Password"></lyte-input>
+        <lyte-button lt-prop-appearance="primary" onclick="{{action('login')}}">
+            <template is="registerYield" yield-name="text">
+               Login
+            </template>
+        </lyte-button>
+    </section>
+    <lyte-alert lt-prop-type="warning" id="user_login_alert"></lyte-alert>
+</template>

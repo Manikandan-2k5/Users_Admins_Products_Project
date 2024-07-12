@@ -1,0 +1,40 @@
+<template tag-name="admin-main-portal">
+    <div class="admin-header">
+        <lyte-button lt-prop-appearance="primary" onclick="{{action('logout')}}">
+            <template is="registerYield" yield-name="text">
+                Logout
+            </template>
+        </lyte-button>
+    </div>
+    <% if(requests.length==0){ %>
+        <div>No Requested Users</div>
+    <% } else{ %>   
+
+        <lyte-search lt-prop-placeholder="Search User" class="admin-search-bar" lt-prop-query-selector = '{"scope" : "tbody", "search" : "td:first-of-type", "target" : "tr"}' on-search = "{{method('error')}}"></lyte-search> 
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mail</th>
+                    <th>Phone No</th>
+                    <th>Approve</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% requests.forEach(function(request){ %>
+                <tr>
+                    <td>{{request.name}}</td>
+                    <td>{{request.phone_no}}</td>
+                    <td>{{request.email}}</td>
+                    <td><lyte-button lt-prop-appearance="primary" onclick="{{action('approveUser',request)}}">
+                        <template is="registerYield" yield-name="text">
+                            Approve
+                        </template>
+                    </lyte-button>   </td>
+                </tr>  
+            <% }); %>
+            </tbody>
+        </table>
+    <% } %>
+
+</template>

@@ -1,0 +1,75 @@
+table {
+    margin:1rem 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.header-buttons{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-buttons > lyte-button{
+    margin: 0 1rem;
+}
+
+
+
+lyte-search{ 
+    width:500px !important;
+    display: block;
+}
+
+.rows:hover{
+    transform:scaley(1.2);
+    background-color: black;
+    color:white;
+}
+
+.header{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:1rem 0;
+}
+
+.main{
+    display: flex;
+    width:100vw;
+}
+
+.products{
+    flex-grow:1;
+}
+
+.view-product-section{
+    flex-grow:1;
+    display:none;
+}
+
+.display{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.detail{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+
+.detail>label, .detail>p{
+    font-size:1.5rem;
+}
