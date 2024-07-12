@@ -1,0 +1,18 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/commons-fileupload-1.4.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/commons-io-2.6.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/commons-lang3-3.8.1.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/freemarker-2.3.31.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/javassist-3.20.0-GA.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/json-20231013.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/log4j-api-2.12.4.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/mysql-connector-j-8.2.0.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/ognl-3.1.29.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/struts2-core-2.5.33.jar",
+        "/home/manikandans/eclipse-workspace/product_project/src/main/webapp/WEB-INF/lib/tomcat-juli-10.0.0.jar",
+        "/home/manikandans/Tomcat/tomcat_1/lib/servlet-api.jar",
+        "/home/manikandans/Downloads/tomcat-dbcp-8.5.50.jar"
+    ]
+}

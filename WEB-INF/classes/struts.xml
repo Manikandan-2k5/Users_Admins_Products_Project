@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd"> 
+
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="corsInterceptor" class="Interceptors.CrossOriginInterceptor"></interceptor>
+			<interceptor name="userSessionValidationInterceptor" class="Interceptors.ValidateUserSessionInterceptor"></interceptor>
+			<interceptor name="adminSessionValidationInterceptor" class="Interceptors.ValidateAdminSessionInterceptor"></interceptor>
+		</interceptors>
+		<action name="registerUserRequest" class="Actions.UserSignUpAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="userLogin" class="Actions.UserLoginAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="adminLogin" class="Actions.AdminLoginAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="getRequestedUsers" class="Actions.GetRequestedUsersAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="adminSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="addUser" class="Actions.AddUserAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="adminSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="getUserProducts" class="Actions.GetUserProducts">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="getAllProducts" class="Actions.GetAllProducts">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="getMRSProducts" class="Actions.GetMRSProducts">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="beforeLogin" class="Actions.BeforeLoginAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="logoutUser" class="Actions.LogoutUserAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="updateUserProductPriority" class="Actions.UpdateProductPriority">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="deleteProduct" class="Actions.DeleteProductAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="updateProduct" class="Actions.UpdateProductAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+		<action name="createProduct" class="Actions.CreateProductAction">
+			<interceptor-ref name="corsInterceptor"/>
+			<interceptor-ref name="userSessionValidationInterceptor"/>
+			<result name="success"></result>
+		</action>
+	</package>
+</struts>
